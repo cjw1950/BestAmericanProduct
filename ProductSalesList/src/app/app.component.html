@@ -1,0 +1,9 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    Welcome to {{ title }}!
+  </h1>
+</div>
+<div *ngFor="let item of content| paginate:{itemsPerPage:20,currentPage:p}">{{item}}</div>
+
+<pagination-controls (pageChange)="p = $event"></pagination-controls>
